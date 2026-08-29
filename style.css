@@ -147,39 +147,38 @@ nav.mainnav a.cta::after{ display:none; }
   .nav-toggle{ display:block; }
 }
 
-/* ---------- hero (navy, with soft circle decoration) ---------- */
+/* ---------- hero (navy, with soft circle + dot-grid texture) ---------- */
 .hero{
-  background: var(--navy-deep);
+  background:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(92,121,214,0.35), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 110% 10%, rgba(76,111,239,0.30), transparent 55%),
+    radial-gradient(ellipse 600px 400px at 50% 120%, rgba(143,164,238,0.18), transparent 60%),
+    linear-gradient(155deg, #151A44 0%, #10143A 55%, #0D1030 100%);
+  background-color: var(--navy-deep);
   color: var(--white);
   position:relative;
   overflow:hidden;
   padding: 90px 0 76px;
+}
+.hero::after{
+  content:"";
+  position:absolute; inset:0; z-index:0;
+  background-image: radial-gradient(rgba(255,255,255,0.09) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(ellipse 80% 70% at 30% 20%, black 40%, transparent 90%);
+  pointer-events:none;
 }
 .hero .circle{
   position:absolute;
   border-radius:50%;
   background: radial-gradient(circle at 35% 35%, rgba(92,121,214,0.5), rgba(92,121,214,0) 70%);
   pointer-events:none;
+  z-index:0;
 }
 .hero .circle.c1{ width:520px; height:520px; top:-220px; right:-160px; }
 .hero .circle.c2{ width:320px; height:320px; bottom:-160px; right:180px; opacity:.6; }
 
 .hero-inner{ position:relative; z-index:1; max-width: 640px; }
-.hero-flex{
-  position:relative; z-index:1;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 32px;
-}
-.hero-illustration{
-  flex: 0 0 340px;
-  max-width: 340px;
-  opacity: 0.92;
-}
-@media (max-width: 900px){
-  .hero-illustration{ display:none; }
-}
 .hero h1{
   color: var(--white);
   font-size: clamp(1.9rem, 4.4vw, 2.9rem);
@@ -232,7 +231,13 @@ section.tight{ padding: 48px 0; }
 .section-head h2{ font-size: clamp(1.5rem, 3.2vw, 2rem); }
 .section-head p{ color: var(--ink-dim); font-size: 1rem; }
 
-.bg-navy{ background: var(--navy-deep); color: var(--white); }
+.bg-navy{
+  background:
+    radial-gradient(ellipse 800px 400px at 90% 0%, rgba(92,121,214,0.22), transparent 55%),
+    radial-gradient(ellipse 600px 400px at 5% 100%, rgba(76,111,239,0.18), transparent 55%),
+    linear-gradient(155deg, #14183F 0%, #10133A 100%);
+  color: var(--white);
+}
 .bg-navy h2, .bg-navy h3{ color: var(--white); }
 .bg-navy .section-head p{ color: var(--text-dim-dark); }
 
