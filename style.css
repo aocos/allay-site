@@ -6,23 +6,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 
 :root{
-  --navy-deep:  #12163C;
-  --navy-panel: #1B2158;
-  --navy-panel-2:#232B6B;
-  --blue:       #5C79D6;
-  --blue-bright:#4C6FEF;
-  --white:      #FFFFFF;
-  --ink:        #14183F;
-  --ink-dim:    #5B6178;
-  --bg-light:   #F5F6FB;
-  --card:       #FFFFFF;
-  --line-dark:  rgba(255,255,255,0.14);
-  --line-light: rgba(20,24,63,0.10);
-  --text-dim-dark: #A9B0DD;
+  /* --- 紺色（Navy）をコーヒーブラウン系に変更 --- */
+  --navy-deep:    #2B1B17; /* 深いエスプレッソブラウン（ヒーロー背景・フッター） */
+  --navy-panel:   #3A2823; /* モカブラウン（ダークカード背景） */
+  --navy-panel-2: #4A352F; /* Warmブラウン（比較表などの強調パネル） */
+  
+  /* --- アクセントカラー（必要に応じてウォームゴールド・ベージュ系に調整） --- */
+  --blue:         #C69C6D; /* キャメルゴールド */
+  --blue-bright:  #D4A373; /* 明るいウォームベージュ（ボタン・アクセント） */
+  
+  --white:        #FFFFFF;
+  --ink:          #1F1917; /* 文字色（ダークブラウン） */
+  --ink-dim:      #6E625D; /* 補足文字色 */
+  --bg-light:     #FDFBF7; /* 全体背景（あたたかみのあるオフホワイト） */
+  --card:         #FFFFFF;
+  --line-dark:    rgba(255,255,255,0.14);
+  --line-light:   rgba(43,27,23,0.10);
+  --text-dim-dark: #D1C2BB; /* 暗い背景の上の補足文字色 */
 
   --font: 'Noto Sans JP', sans-serif;
 }
-
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
 
